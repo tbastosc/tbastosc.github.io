@@ -22,13 +22,13 @@ markup:
     renderer:
       unsafe: true
 
-Menus:
-  main:
-    - identifier: blog
-      name: Blog
-      title: Blog posts
-      url: /blogs
-      weight: 1
+#Menus:
+#  main:
+#    - identifier: blog
+#      name: Blog
+#      title: Blog posts
+#      url: /blogs
+#      weight: 1
 
 params:
   title: "Portfolio"
@@ -68,8 +68,8 @@ params:
 
   navbar:
     align: ms-auto
-    brandName: "./TiagoBastos"
-    disableSearch: false
+    brandName: "TiagoBastos"
+    disableSearch: true
     stickyNavBar:
       enable: true
       showOnScrollUp: true
@@ -85,10 +85,10 @@ params:
   # ─── Hero Section ───────────────────────────────────────────
   hero:
     enable: true
-    intro: "Hi, my name is"
-    title: "Tiago Bastos."
-    subtitle: "Detection starts with visibility, response starts with preparation"
-    content: "Network & Cybersecurity Administrator. "
+    intro: "$~: whoami"
+    title: "TiagoBastos"
+    subtitle: "Network & Cybersecurity Administrator"
+    content: "Detection starts with visibility, response starts with preparation. Good security is built, not bought."
     image: images/hero.png
     bottomImage:
       enable: false
@@ -257,7 +257,7 @@ params:
       path: "blogs"
       count: 3
       title: Recent Posts
-      enable: true
+      enable: false
       disableFeaturedImage: false
     socialNetworks:
       github: "https://github.com/tbastosc"
