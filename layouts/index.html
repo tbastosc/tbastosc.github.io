@@ -16,10 +16,10 @@
 {{- partial "sections/about.html" . -}}
 {{- partial "sections/experience.html" . -}}
 {{- partial "sections/education.html" . -}}
+{{- partial "sections/achievements.html" . -}}
 {{- partial "sections/projects.html" . -}}
 {{- partial "sections/cards.html" (dict "site" . "id" "writeups" "cfg" .Site.Params.writeups) -}}
 {{- partial "sections/cards.html" (dict "site" . "id" "runbooks" "cfg" .Site.Params.runbooks) -}}
 {{- partial "sections/cards.html" (dict "site" . "id" "notes" "cfg" .Site.Params.notes) -}}
-{{- partial "sections/achievements.html" . -}}
 {{- partial "sections/contact.html" . -}}
 {{ end }}
