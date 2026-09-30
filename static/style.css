@@ -425,3 +425,46 @@ a {
     height: 180px;
   }
 }
+
+/* ── About: Skills em tabela ── */
+#about .skills {
+  width: 100%;
+  margin-top: 1rem;
+  overflow-x: auto;
+}
+
+#about .skills table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.95rem;
+}
+
+#about .skills th,
+#about .skills td {
+  padding: 0.65rem 0.9rem;
+  text-align: left;
+  vertical-align: middle;
+  border-bottom: 1px solid var(--secondary-color);
+}
+
+.dark #about .skills th,
+.dark #about .skills td {
+  border-bottom-color: rgba(255, 255, 255, 0.08);
+}
+
+/* Coluna "Area" compacta */
+#about .skills td:first-child,
+#about .skills th:first-child {
+  white-space: nowrap;
+  width: 1%;
+}
+
+/* Badges lado a lado */
+#about .skills td img {
+  display: inline-block;
+  height: 22px;
+  margin: 3px 6px 3px 0;
+  vertical-align: middle;
+}
+#about .skills { overflow-x: auto; }
+#about .skills td:last-child { line-height: 2; }
