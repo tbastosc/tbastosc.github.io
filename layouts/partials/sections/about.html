@@ -13,17 +13,21 @@
             {{ end }}
             <div class="col-sm-12 col-md-12 col-lg-8 content">
                 {{ $about.content | markdownify }}
-
-                {{ if .Site.Params.about.skills.enable }}
-                {{ $about.skills.title | default .Site.Params.about.skills.title }}
-                <ul>
-                    {{ range .Site.Params.about.skills.items }}
-                    <li>{{ . | markdownify }}</li>
-                    {{ end }}
-                </ul>
-                {{ end }}
             </div>
         </div>
+
+        {{ if .Site.Params.about.skills.enable }}
+        <div class="row justify-content-center px-3 pb-4">
+            <div class="col-12">
+                <p class="skills-title">{{ $about.skills.title | default .Site.Params.about.skills.title }}</p>
+                <div class="skills">
+                    {{ range .Site.Params.about.skills.items }}
+                    {{ . | markdownify }}
+                    {{ end }}
+                </div>
+            </div>
+        </div>
+        {{ end }}
     </div>
 </section>
 {{ end }}
