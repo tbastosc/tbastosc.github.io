@@ -547,3 +547,16 @@ pre {
     transition: none;
   }
 }
+
+/* Cartão de projeto inteiro clicável */
+#projects .card a::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+}
+
+#projects .card {
+  position: relative;
+  cursor: pointer;
+}
