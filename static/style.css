@@ -1,8 +1,3 @@
-/* ────────────────────────────────────────────────────────────
-   Portfolio Demo — Custom Styles
-   GitHub-inspired palette, editorial typography, clean layout
-   ──────────────────────────────────────────────────────────── */
-
 /* ── Global ──────────────────────────────────────────────── */
 
 ::selection {
@@ -427,59 +422,29 @@ a {
 }
 
 /* ── Correção para a Tabela de Skills no About ───────────── */
-/* 1. Alarga a grelha da secção About para ocupar a largura total */
+/* Alarga a secção About para ocupar o espaço do container */
 #about .row > div {
   flex: 0 0 100% !important;
   max-width: 100% !important;
 }
 
-/* 2. Neutraliza a tabela do Markdown e transforma-a num contentor flexível fluido */
+/* Transforma a tabela numa grelha fluida de itens */
 #about .content table {
   width: 100% !important;
-  display: flex !important;
-  flex-direction: column !important;
-  border: none !important;
+  display: block !important;
 }
 
-#about .content table tbody {
-  display: flex !important;
-  flex-direction: column !important;
-  width: 100% !important;
-}
-
-#about .content table tr {
-  display: flex !important;
-  flex-wrap: wrap !important;
-  width: 100% !important;
-  align-items: center;
-  margin-bottom: 0.5rem;
-  border: none !important;
-}
-
-/* 3. Cabeçalhos (ex: "Linguagens", "Ferramentas") ficam numa linha ou lado a lado de forma limpa */
+#about .content table tbody, 
+#about .content table tr, 
+#about .content table td, 
 #about .content table th {
-  display: inline-block !important;
-  width: 140px !important; /* Ajusta a largura do título da categoria se necessário */
-  font-weight: 600;
-  vertical-align: top;
-  padding: 4px 8px 4px 0 !important;
-  border: none !important;
+  display: block !important;
+  width: 100% !important;
 }
 
-/* 4. A célula com os badges ajusta-se dinamicamente e flui o conteúdo */
-#about .content table td {
-  display: flex !important;
-  flex-wrap: wrap !important;
-  flex: 1 !important;
-  gap: 6px !important; /* Espaçamento automático entre os badges */
-  padding: 4px 0 !important;
-  border: none !important;
-  background: transparent !important;
-}
-
-/* 5. Garante que cada badge/imagem se comporta perfeitamente sem rebentar */
+/* Faz com que as imagens dos badges quebrem linha e se espaçam bem */
 #about .content table td img {
   display: inline-block !important;
-  margin: 0 !important;
-  height: 22px; /* Altura consistente para badges do tipo shields.io */
+  margin: 4px 6px 4px 0 !important;
+  max-width: 100%;
 }
