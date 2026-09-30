@@ -94,7 +94,7 @@ params:
     bottomImage:
       enable: false
     button:
-      enable: true
+      enable: false
       name: "Resume"
       url: "#"
       download: false
