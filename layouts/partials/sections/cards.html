@@ -11,6 +11,7 @@
         <h3 class="text-center">{{ $cfg.title }}</h3>
         <div class="row justify-content-center px-3 px-md-5">
             {{ range $cfg.items }}
+            {{ $links := .links }}
             <div class="col-lg-4 col-md-6 my-3">
                 <div class="card my-3 h-100" title="{{ .title }}">
                     {{ with .image }}
@@ -24,7 +25,9 @@
                             {{ range . }}<span class="badge badge-secondary">{{ . }}</span> {{ end }}
                         </div>
                         {{ end }}
-                        <h5 class="card-title bg-transparent mt-1">{{ .title }}</h5>
+                        <h5 class="card-title bg-transparent mt-1">
+                            {{ if $links }}<a href="{{ (index $links 0).url }}" target="_blank" rel="noopener" class="text-decoration-none">{{ .title }}</a>{{ else }}{{ .title }}{{ end }}
+                        </h5>
                         <div class="card-text bg-transparent secondary-font">
                             {{ .content }}
                         </div>
@@ -32,8 +35,8 @@
                     {{ with .links }}
                     <div class="card-footer py-3">
                         {{ range . }}
-                        <a class="btn btn-sm m-1" href="{{ .url }}" target="_blank" rel="noopener">
-                            {{ .name | default "View" }}
+                        <a class="btn btn-sm btn-outline-info m-1" href="{{ .url }}" target="_blank" rel="noopener">
+                            <i class="fas fa-up-right-from-square"></i> {{ .name | default "View" }}
                         </a>
                         {{ end }}
                     </div>
