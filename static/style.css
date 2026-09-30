@@ -422,29 +422,23 @@ a {
 }
 
 /* ── Correção para a Tabela de Skills no About ───────────── */
-/* Alarga a secção About para ocupar o espaço do container */
-#about .row > div {
-  flex: 0 0 100% !important;
-  max-width: 100% !important;
-}
-
-/* Transforma a tabela numa grelha fluida de itens */
 #about .content table {
-  width: 100% !important;
-  display: block !important;
+  width: 100%;
+  display: block;
+  overflow-x: auto;
+  white-space: nowrap;
+  border-collapse: collapse;
+  margin-top: 1rem;
 }
 
-#about .content table tbody, 
-#about .content table tr, 
-#about .content table td, 
-#about .content table th {
-  display: block !important;
-  width: 100% !important;
+#about .content table th,
+#about .content table td {
+  padding: 0.5rem 0.75rem;
+  vertical-align: middle;
 }
 
-/* Faz com que as imagens dos badges quebrem linha e se espaçam bem */
 #about .content table td img {
-  display: inline-block !important;
-  margin: 4px 6px 4px 0 !important;
-  max-width: 100%;
+  display: inline-block;
+  margin: 2px 3px;
+  height: 20px; /* Garante que os badges ficam uniformes e alinhados */
 }
