@@ -1,11 +1,18 @@
-/* Alarga a secção de about e permite que tabelas ocupem mais espaço */
-#about .content table {
-  width: 100%;
-  display: table;
-  overflow-x: auto;
+/* 1. Alarga o contentor principal da página de conteúdo/about se necessário */
+.container, .content, #about {
+  max-width: 100% !important;
+  width: 100% !important;
 }
 
-#about .content table th,
-#about .content table td {
-  white-space: nowrap; /* Evita que os badges quebrem a meio de forma estranha */
+/* 2. Força a tabela a comportar-se como tabela fluida e ocupar o espaço necessário */
+table {
+  width: 100% !important;
+  display: table !important;
+  table-layout: auto !important;
+}
+
+/* 3. Garante que as células se ajustam ao conteúdo e evitam cortes estranhos */
+th, td {
+  width: auto !important;
+  white-space: normal !important;
 }
