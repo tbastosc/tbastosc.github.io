@@ -32,6 +32,7 @@ markup:
 
 params:
   title: "Portfolio"
+  copyright: "Tiago Bastos"
   description: "Network & Cybersecurity Administrator portfolio and blog"
   favicon: "bb-white-logo.png"
 
@@ -112,6 +113,15 @@ params:
     image: "images/me.png"
     content: |-
       Early-career **Network & Cybersecurity Administrator** with hands-on experience in **Security Operations and Incident Response**. My background in military technical operations, mechatronics and industrial automation gives me a practical view of the security challenges where **IT meets OT**.
+
+      - 🔎 SOC work: alert triage, phishing response, detection engineering (SIEM/SOAR, EDR/XDR)
+      - 🌐 Networking: segmentation, firewalls, Zero Trust access, hardening
+      - 🧪 I learn by building: my Proxmox homelab is my training ground for blue team defense
+      - 🎯 Aiming for: full-time **SOC Analyst** → threat detection, investigation and IR
+
+      🇵🇹 Portuguese · 🇬🇧 English · 🇫🇷 French
+
+      > **Now:** SC-200 ✅ · working towards **Cisco CCNA** and **HTB CDSA**
     skills:
       enable: true
       title: "Technologies and tools I work with:"
@@ -174,30 +184,98 @@ params:
         content: |-
           Technical background bridging mechanics, electronics, and industrial automation, providing a solid foundation for IT/OT security challenges.
 
+  # ─── Write-ups (secção custom: layouts/partials/sections/cards.html) ───
+  writeups:
+    enable: true
+    title: "Write-ups"
+    items:
+      - title: "All write-ups"
+        content: "CTF and lab write-ups collected in a single repository."
+        image: images/writeups/writeups.png
+        links:
+          - name: "GitHub"
+            url: "https://github.com/tbastosc/writeups"
+
+  # ─── Runbooks & Playbooks (secção custom) ───────────────────
+  runbooks:
+    enable: true
+    title: "Runbooks & Playbooks"
+    items:
+      - title: "Threat Hunting with KQL"
+        content: "Playbook for structured threat hunting with KQL."
+        image: images/runbooks/threat-hunting.png
+        links:
+          - name: "PT"
+            url: "https://github.com/tbastosc/docs-runbooks-playbooks/blob/main/playbook_threat_hunting_kql.md"
+          - name: "ENG"
+            url: "https://github.com/tbastosc/docs-runbooks-playbooks/blob/main/playbook_threat_hunting_kql_EN.md"
+      - title: "Unlocking Machines - CrowdStrike"
+        content: "Runbook to unlock machines contained in CrowdStrike."
+        image: images/runbooks/crowdstrike.png
+        links:
+          - name: "PT"
+            url: "https://github.com/tbastosc/docs-runbooks-playbooks/blob/main/runbook_desbloqueio_crowdstrike.md"
+      - title: "Phishing Runbook - GSO"
+        content: "Runbook for phishing triage and response."
+        image: images/runbooks/phishing.png
+        links:
+          - name: "PT"
+            url: "https://github.com/tbastosc/docs-runbooks-playbooks/blob/main/runbook_phishing.md"
+
+  # ─── Notes & CheatSheets (secção custom) ────────────────────
+  notes:
+    enable: true
+    title: "Notes & CheatSheets"
+    items:
+      - title: "Linux CheatSheet: Fundamentals to Advanced (PT)"
+        content: "Quick-reference notes covering Linux from the fundamentals to advanced usage."
+        image: images/notes/linux.png
+        badges:
+          - "Linux"
+          - "PT"
+        links:
+          - name: "View"
+            url: "https://tbastosc.github.io/linux-cheatsheet"
+      - title: "Microsoft CheatSheet: Fundamentals to Advanced (PT)"
+        content: "Quick-reference notes covering the Microsoft ecosystem from the fundamentals to advanced usage."
+        image: images/notes/microsoft.png
+        badges:
+          - "Microsoft"
+          - "PT"
+        links:
+          - name: "View"
+            url: "https://tbastosc.github.io/microsoft-cheatsheet"
+
   # ─── Certifications / Achievements ─────────────────────────
   achievements:
     enable: true
     title: "Certifications & Training"
     items:
-      - title: "Microsoft Certified: Security Operations Analyst Associate (SC-200)"
+      - title: "✅ Microsoft Certified: Security Operations Analyst Associate (SC-200)"
         content: "Validates proficiency in mitigating threats using Microsoft Sentinel, Microsoft Defender for Cloud, and Microsoft 365 Defender."
-        url: "#"
-      - title: "Network Administration and Cybersecurity"
+      - title: "✅ Network Administration and Cybersecurity"
         content: "Completed specialized training covering network security, administration, and defense operations (09/2025 – 05/2026)."
-        url: "#"
-      - title: "Advanced Course in Automation and Robotics"
+      - title: "✅ Introduction to Cybersecurity"
+        content: "Foundational cybersecurity training (2025)."
+      - title: "✅ Python programming languages"
+        content: "Python programming course (2024–2025)."
+      - title: "✅ Advanced Course in Automation and Robotics"
         content: "Focused on technical operations, automation systems, and control logic (2023–2025)."
-        url: "#"
-      - title: "CET Level 5: Specialist Technician in Mechatronics"
+      - title: "✅ CET Level 5: Specialist Technician in Mechatronics"
         content: "Industrial automation and technical operations training (2020–2022)."
-        url: "#"
+      - title: "🟡 Cisco CCNA"
+        content: "In progress."
+      - title: "🟡 HTB Certified Defensive Security Analyst (CDSA)"
+        content: "In progress."
+      - title: "🟡 CyberDefenders Certified CyberDefender (CCDL1/2)"
+        content: "Planned."
 
   # ─── Projects Section ──────────────────────────────────────
   projects:
     enable: true
     items:
       - title: "Secure Infrastructure for company Codesecure"
-        content: "Designed and implemented a segmented, secure IT infrastructure (defense-in-depth + ZTNA) featuring pfSense, Wazuh, Active Directory, and Linux hardening."
+        content: "Cesae Digital · 01/2026 – 03/2026 — Final project of the Network & Cybersecurity Administrator assessment. Segmented, secure infrastructure (defense-in-depth + ZTNA) for a simulated company with 120 hosted websites and 14 client VMs: VLANs/VLSM, DMZ, pfSense, Cloudflare ZTNA, Drupal SQLi pentest mapped to MITRE ATT&CK, risk assessment of 19 critical assets, Linux/AD hardening and Wazuh SIEM with active response."
         image: images/projects/profile.png
         badges:
           - "Packet Tracer"
@@ -205,15 +283,19 @@ params:
           - "Wazuh"
           - "Active Directory"
           - "Linux"
+          - "Nessus"
+          - "GRC"
+          - "MITRE ATT&CK"
         links:
           - icon: fab fa-github
             url: "https://github.com/tbastosc/Network-Cybersecurity-Adminitrator-Assessment-Project"
 
       - title: "Threat Hunting - Sentinel & Defender XDR"
-        content: "Hands-on Azure lab built for SC-200 preparation, featuring analytics rules, custom detections, and threat hunting for MITRE ATT&CK techniques with KQL."
+        content: "05/2026 – 08/2026 — Hands-on Azure lab built while preparing for the SC-200. Sentinel workspace and data connectors, analytics rules (including multistage attack detection), custom detections, watchlists, threat intelligence IOCs and hunting for MITRE ATT&CK techniques with KQL."
         image: images/projects/profile2.png
         badges:
           - "Microsoft Sentinel"
+          - "Azure Log Analytics"
           - "KQL"
           - "Defender XDR"
           - "MITRE ATT&CK"
@@ -221,21 +303,27 @@ params:
           - icon: fab fa-github
             url: "https://github.com/tbastosc/sentinel-defender-xdr-threat-hunting"
 
-      - title: "Security SOC Lab - Proxmox Server"
-        content: "Self-hosted Proxmox environment used for blue team defense, alert triage, incident investigation, and simulated red team operations."
+      - title: "Security SOC Lab - Proxmox Server (WIP)"
+        content: "05/2026 – Current — Self-hosted Proxmox environment split into a cybersecurity lab and a personal cloud (Jellyfin, Immich, backups). Used to practice alert triage, investigation, containment and remediation, with blue team tooling (Security Onion, Wazuh, Suricata/Zeek, TheHive/Cortex, MISP) and red team practice (Kali, Metasploit, Caldera, VulnHub, AD attack/defense)."
         image: images/projects/converter.png
         badges:
           - "Proxmox"
+          - "pfSense"
+          - "Twingate"
+          - "Cloudflare ZT"
           - "Security Onion"
+          - "Wazuh"
           - "TheHive"
           - "MISP"
           - "Docker"
         links:
           - icon: fab fa-github
             url: "https://github.com/tbastosc/proxmox-homelab"
+          - icon: fas fa-book
+            url: "https://github.com/tbastosc/proxmox-homelab/tree/main/docs"
 
       - title: "Goku-Invaders - Python Game"
-        content: "A modified take on classic Space Invaders built as a team final project for a Python programming course, featuring vertical movement and wave progression."
+        content: "Dec 2024 – Feb 2025 — Team final project of a Python programming course: a modified Space Invaders where Goku moves vertically and shoots enemy waves to save Kika. Level progression, story sequences between levels and a scoring system."
         image: images/projects/converter.png
         badges:
           - "Python"
@@ -253,6 +341,8 @@ params:
 
   # ─── Footer ────────────────────────────────────────────────
   footer:
+    # Texto por baixo do copyright. Deixa "" para não mostrar nada.
+    tagline: "Built with Hugo · Hosted on GitHub Pages"
     recentPosts:
       path: "blogs"
       count: 3
