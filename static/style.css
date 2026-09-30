@@ -1,7 +1,14 @@
 /* ────────────────────────────────────────────────────────────
-   Portfolio Demo — Custom Styles
-   GitHub-inspired palette, editorial typography, clean layout
+   Portfolio — Custom Styles (terminal theme)
+   GitHub-inspired palette, monospace system fonts, no downloads
    ──────────────────────────────────────────────────────────── */
+
+/* ── Tokens ──────────────────────────────────────────────── */
+
+:root {
+  --font-terminal: 'Ubuntu Mono', 'DejaVu Sans Mono', 'Liberation Mono',
+                   'Cascadia Mono', Menlo, Consolas, 'Courier New', monospace;
+}
 
 /* ── Global ──────────────────────────────────────────────── */
 
@@ -13,10 +20,27 @@ html {
   scroll-behavior: smooth;
 }
 
+/* Força a fonte terminal em todo o site (sobrepõe Lora/Alata do tema) */
+body,
+h1, h2, h3, h4, h5, h6,
+p, li, a, span, button, input, textarea,
+.btn, .badge, .navbar, .navbar-brand, .nav-link,
+.card, .card-body, .card-title, .card-text {
+  font-family: var(--font-terminal) !important;
+}
+
 body {
-  font-family: 'Lora', Georgia, serif;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  letter-spacing: 0;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+/* Monospace é mais larga: sem letter-spacing negativo nos títulos */
+h1, h2, h3, h4, h5, h6,
+.navbar-brand {
+  letter-spacing: 0 !important;
 }
 
 /* Reduce excessive section spacing */
@@ -26,11 +50,15 @@ section {
 }
 
 section h3 {
-  font-family: 'Alata', sans-serif;
   font-weight: 400;
   font-size: 1.75rem;
-  letter-spacing: -0.02em;
   margin-bottom: 2rem;
+}
+
+/* Extra: prompt de terminal antes dos títulos de secção */
+section h3::before {
+  content: "$ ";
+  color: var(--primary-color);
 }
 
 /* Tighten up containers */
@@ -38,9 +66,16 @@ section h3 {
   max-width: 1100px;
 }
 
-/* Links: no underline by default, underline on hover */
 a {
   transition: color 0.2s ease-out;
+}
+
+/* Extra: foco visível para navegação por teclado */
+a:focus-visible,
+.btn:focus-visible,
+button:focus-visible {
+  outline: 2px solid var(--primary-color);
+  outline-offset: 3px;
 }
 
 /* ── Hero ────────────────────────────────────────────────── */
@@ -53,33 +88,40 @@ a {
 }
 
 #hero .subtitle {
-  font-family: 'Lora', Georgia, serif;
   font-size: 0.9rem;
-  letter-spacing: 0.04em;
-  text-transform: uppercase;
-  opacity: 0.5;
+  letter-spacing: 0;
+  opacity: 0.6;
 }
 
 #hero h1 {
-  font-family: 'Alata', sans-serif;
-  font-size: clamp(2.5rem, 5vw, 3.75rem);
+  font-size: clamp(2rem, 4.5vw, 3.25rem);
   font-weight: 400;
-  letter-spacing: -0.03em;
-  line-height: 1.1;
+  line-height: 1.15;
   margin-bottom: 0.25rem;
 }
 
+/* Extra: cursor de terminal a piscar no nome */
+#hero h1::after {
+  content: "_";
+  color: var(--primary-color);
+  margin-left: 0.15em;
+  animation: cursor-blink 1.1s steps(1) infinite;
+}
+
+@keyframes cursor-blink {
+  0%, 50%   { opacity: 1; }
+  50.01%, 100% { opacity: 0; }
+}
+
 #hero h2 {
-  font-family: 'Alata', sans-serif;
-  font-size: clamp(1.1rem, 2.5vw, 1.5rem);
+  font-size: clamp(1rem, 2.2vw, 1.3rem);
   font-weight: 400;
-  letter-spacing: -0.01em;
-  opacity: 0.7;
+  opacity: 0.75;
   margin-bottom: 1rem;
 }
 
 #hero .hero-content {
-  font-size: 1.05rem;
+  font-size: 1rem;
   line-height: 1.7;
   max-width: 540px;
   opacity: 0.85;
@@ -107,9 +149,7 @@ a {
 
 /* Hero button */
 #hero .btn {
-  font-family: 'Alata', sans-serif;
   font-size: 0.875rem;
-  letter-spacing: 0.02em;
   border: 1.5px solid var(--primary-color);
   color: var(--primary-color);
   padding: 0.5rem 1.5rem;
@@ -147,13 +187,12 @@ a {
 }
 
 #about .content {
-  font-size: 1.05rem;
+  font-size: 1rem;
   line-height: 1.75;
 }
 
-/* Skills badges */
+/* Skills badges (caso uses o formato original do tema) */
 #about .badge {
-  font-family: 'Alata', sans-serif;
   font-size: 0.8rem;
   font-weight: 400;
   padding: 0.35rem 0.75rem;
@@ -170,11 +209,64 @@ a {
   border-color: rgba(255, 255, 255, 0.08);
 }
 
+/* ── About: Skills em tabela (largura total) ─────────────── */
+
+#about .skills-title {
+  margin-bottom: 0.5rem;
+}
+
+#about .skills {
+  width: 100%;
+  margin-top: 1rem;
+  overflow-x: auto;
+}
+
+#about .skills table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.9rem;
+}
+
+#about .skills th,
+#about .skills td {
+  padding: 0.65rem 0.9rem;
+  text-align: left;
+  vertical-align: middle;
+  border-bottom: 1px solid var(--secondary-color);
+}
+
+.dark #about .skills th,
+.dark #about .skills td {
+  border-bottom-color: rgba(255, 255, 255, 0.08);
+}
+
+#about .skills th {
+  color: var(--text-secondary-color);
+  font-weight: 400;
+}
+
+/* Coluna "Area" compacta */
+#about .skills td:first-child,
+#about .skills th:first-child {
+  white-space: nowrap;
+  width: 1%;
+}
+
+/* Badges lado a lado */
+#about .skills td:last-child {
+  line-height: 2;
+}
+
+#about .skills td img {
+  display: inline-block;
+  height: 22px;
+  margin: 3px 6px 3px 0;
+  vertical-align: middle;
+}
+
 /* ── Experience ──────────────────────────────────────────── */
 
-/* Tab pills — underline style instead of fill */
 #experience .nav-pills .nav-link {
-  font-family: 'Alata', sans-serif;
   font-size: 0.9rem;
   border-radius: 0;
   padding: 0.5rem 1rem;
@@ -208,7 +300,6 @@ a {
 }
 
 #experience .card-body h5 {
-  font-family: 'Alata', sans-serif;
   font-weight: 400;
 }
 
@@ -231,12 +322,10 @@ a {
 }
 
 #education .index {
-  font-family: 'Alata', sans-serif;
   opacity: 0.3;
 }
 
 #education .card-body h4 {
-  font-family: 'Alata', sans-serif;
   font-weight: 400;
 }
 
@@ -265,7 +354,6 @@ a {
   border-color: rgba(255, 255, 255, 0.1);
 }
 
-/* Project card images */
 .card-img-top {
   object-fit: cover;
   height: 200px;
@@ -282,7 +370,6 @@ a {
 
 /* Project/tech badges */
 .badge.bg-primary {
-  font-family: 'Alata', sans-serif;
   font-size: 0.75rem;
   font-weight: 400;
   padding: 0.3rem 0.65rem;
@@ -325,13 +412,12 @@ a {
 }
 
 #achievements .card-body h5 {
-  font-family: 'Alata', sans-serif;
   font-weight: 400;
   font-size: 1rem;
 }
 
 #achievements .card-body p {
-  font-size: 0.9rem;
+  font-size: 0.875rem;
   opacity: 0.8;
 }
 
@@ -344,15 +430,13 @@ a {
 #contact p {
   max-width: 500px;
   margin: 0 auto 1.5rem;
-  font-size: 1.05rem;
+  font-size: 1rem;
   line-height: 1.7;
   opacity: 0.85;
 }
 
 #contact .btn {
-  font-family: 'Alata', sans-serif;
   font-size: 0.9rem;
-  letter-spacing: 0.02em;
   background: var(--primary-color);
   color: #ffffff;
   border: none;
@@ -373,9 +457,7 @@ a {
 /* ── Navbar ──────────────────────────────────────────────── */
 
 .navbar {
-  font-family: 'Alata', sans-serif;
   font-size: 0.875rem;
-  letter-spacing: 0.01em;
 }
 
 .dark .navbar {
@@ -385,7 +467,6 @@ a {
 
 .navbar-brand {
   font-size: 1rem;
-  letter-spacing: -0.01em;
 }
 
 /* ── Footer ──────────────────────────────────────────────── */
@@ -403,6 +484,26 @@ a {
   height: 160px;
 }
 
+/* ── Código (posts do blog) ──────────────────────────────── */
+
+pre,
+code,
+kbd,
+samp {
+  font-family: var(--font-terminal) !important;
+}
+
+pre {
+  border: 1px solid var(--secondary-color);
+  border-radius: 8px;
+  padding: 1rem;
+  overflow-x: auto;
+}
+
+.dark pre {
+  border-color: rgba(255, 255, 255, 0.08);
+}
+
 /* ── Responsive ──────────────────────────────────────────── */
 
 @media (max-width: 768px) {
@@ -413,7 +514,7 @@ a {
   }
 
   #hero h1 {
-    font-size: 2.25rem;
+    font-size: 1.9rem;
   }
 
   section {
@@ -424,47 +525,25 @@ a {
   .card-img-top {
     height: 180px;
   }
+
+  #about .skills table {
+    font-size: 0.85rem;
+  }
 }
 
-/* ── About: Skills em tabela ── */
-#about .skills {
-  width: 100%;
-  margin-top: 1rem;
-  overflow-x: auto;
-}
+/* ── Acessibilidade: sem animação se o utilizador o pedir ── */
 
-#about .skills table {
-  width: 100%;
-  border-collapse: collapse;
-  font-size: 0.95rem;
-}
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
 
-#about .skills th,
-#about .skills td {
-  padding: 0.65rem 0.9rem;
-  text-align: left;
-  vertical-align: middle;
-  border-bottom: 1px solid var(--secondary-color);
-}
+  #hero h1::after {
+    animation: none;
+  }
 
-.dark #about .skills th,
-.dark #about .skills td {
-  border-bottom-color: rgba(255, 255, 255, 0.08);
+  .card,
+  .card-img-top {
+    transition: none;
+  }
 }
-
-/* Coluna "Area" compacta */
-#about .skills td:first-child,
-#about .skills th:first-child {
-  white-space: nowrap;
-  width: 1%;
-}
-
-/* Badges lado a lado */
-#about .skills td img {
-  display: inline-block;
-  height: 22px;
-  margin: 3px 6px 3px 0;
-  vertical-align: middle;
-}
-#about .skills { overflow-x: auto; }
-#about .skills td:last-child { line-height: 2; }
