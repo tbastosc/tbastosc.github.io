@@ -32,7 +32,7 @@ markup:
 
 params:
   title: "Portfolio"
-  copyright: "Tiago Bastos"
+  copyright: ""   # texto depois do ©; vazio = só "© 2026 All rights reserved"
   description: "Network & Cybersecurity Administrator portfolio and blog"
   favicon: "bb-white-logo.png"
 
