@@ -1,6 +1,6 @@
-baseURL: "https://ethanolivertroy.github.io/hugo-portfolio-demo/"
+baseURL: "https://tbastosc.github.io/"
 languageCode: "en-us"
-title: "Alex Chen | Security Portfolio"
+title: "Tiago Bastos | Portfolio"
 theme: hugo-profile
 
 outputs:
@@ -31,9 +31,9 @@ Menus:
       weight: 1
 
 params:
-  title: "Security Portfolio"
-  description: "Cybersecurity professional portfolio and blog"
-  favicon: "fav.png"
+  title: "Portfolio"
+  description: "Networking & Cybersecurity Administrator portfolio and blog"
+  favicon: "bb-logo.png"
 
   useBootstrapCDN: false
   customCSS: true
@@ -69,7 +69,7 @@ params:
 
   navbar:
     align: ms-auto
-    brandName: "Alex Chen"
+    brandName: "Bastos"
     disableSearch: false
     stickyNavBar:
       enable: true
@@ -87,7 +87,7 @@ params:
   hero:
     enable: true
     intro: "Hi, my name is"
-    title: "Alex Chen."
+    title: "Tiago Bastos."
     subtitle: "I build and defend secure systems"
     content: "Security engineer by day, CTF player by night. I specialize in cloud security architecture and compliance automation — turning security requirements into infrastructure-as-code. Based in Austin, TX."
     image: images/hero.png
@@ -97,7 +97,7 @@ params:
       enable: true
       name: "Resume"
       url: "#"
-      download: true
+      download: false
       newPage: false
     socialLinks:
       fontAwesomeIcons:
@@ -105,8 +105,8 @@ params:
           url: "#"
         - icon: fab fa-linkedin
           url: "#"
-        - icon: fab fa-x-twitter
-          url: "#"
+        #- icon: fab fa-x-twitter
+         # url: "#"
 
   # ─── About Section ─────────────────────────────────────────
   about:
@@ -114,34 +114,21 @@ params:
     title: "About Me"
     image: "images/me.png"
     content: |-
-      I started my career in a SOC, moved into application security, and now lead cloud security initiatives at a mid-stage startup. Along the way I picked up a habit of automating everything — from compliance evidence collection to vulnerability triage.
-
-      When I'm not working, I'm probably competing in CTFs, contributing to open-source security tools, or writing about what I've learned. I believe the best security work happens when you make it easy for engineers to do the right thing by default.
-    skills:
+      Early-career Network & Cybersecurity Administrator with hands-on experience in Security Operations and Incident Response. My background in military technical operations, mechatronics and industrial automation gives me a practical view of the security challenges where IT meets OT.
+      skills:
       enable: true
       title: "Technologies and tools I work with:"
       items:
-        - "Python"
-        - "Go"
-        - "Terraform"
-        - "Kubernetes"
-        - "AWS / GCP / Azure"
-        - "Burp Suite"
-        - "Docker"
-        - "Linux"
-        - "Nmap"
-        - "Wireshark"
-        - "Git"
-        - "CI/CD"
+        - tabela com icons
 
   # ─── Experience Section ─────────────────────────────────────
   experience:
     enable: true
     items:
-      - company: "CrowdShield"
+      - company: "MC / SONAE"
         companyUrl: "#"
         jobs:
-          - name: "Senior Security Engineer"
+          - name: "Security Analyst"
             date: "Jan 2023 - Present"
             content: |
               Leading cloud security initiatives across AWS and GCP environments. Responsible for threat modeling, security architecture reviews, and incident response.
