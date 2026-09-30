@@ -1,3 +1,8 @@
+/* ────────────────────────────────────────────────────────────
+   Portfolio Demo — Custom Styles
+   GitHub-inspired palette, editorial typography, clean layout
+   ──────────────────────────────────────────────────────────── */
+
 /* ── Global ──────────────────────────────────────────────── */
 
 ::selection {
@@ -422,23 +427,59 @@ a {
 }
 
 /* ── Correção para a Tabela de Skills no About ───────────── */
+/* 1. Alarga a grelha da secção About para ocupar a largura total */
+#about .row > div {
+  flex: 0 0 100% !important;
+  max-width: 100% !important;
+}
+
+/* 2. Neutraliza a tabela do Markdown e transforma-a num contentor flexível fluido */
 #about .content table {
-  width: 100%;
-  display: block;
-  overflow-x: auto;
-  white-space: nowrap;
-  border-collapse: collapse;
-  margin-top: 1rem;
+  width: 100% !important;
+  display: flex !important;
+  flex-direction: column !important;
+  border: none !important;
 }
 
-#about .content table th,
+#about .content table tbody {
+  display: flex !important;
+  flex-direction: column !important;
+  width: 100% !important;
+}
+
+#about .content table tr {
+  display: flex !important;
+  flex-wrap: wrap !important;
+  width: 100% !important;
+  align-items: center;
+  margin-bottom: 0.5rem;
+  border: none !important;
+}
+
+/* 3. Cabeçalhos (ex: "Linguagens", "Ferramentas") ficam numa linha ou lado a lado de forma limpa */
+#about .content table th {
+  display: inline-block !important;
+  width: 140px !important; /* Ajusta a largura do título da categoria se necessário */
+  font-weight: 600;
+  vertical-align: top;
+  padding: 4px 8px 4px 0 !important;
+  border: none !important;
+}
+
+/* 4. A célula com os badges ajusta-se dinamicamente e flui o conteúdo */
 #about .content table td {
-  padding: 0.5rem 0.75rem;
-  vertical-align: middle;
+  display: flex !important;
+  flex-wrap: wrap !important;
+  flex: 1 !important;
+  gap: 6px !important; /* Espaçamento automático entre os badges */
+  padding: 4px 0 !important;
+  border: none !important;
+  background: transparent !important;
 }
 
+/* 5. Garante que cada badge/imagem se comporta perfeitamente sem rebentar */
 #about .content table td img {
-  display: inline-block;
-  margin: 2px 3px;
-  height: 20px; /* Garante que os badges ficam uniformes e alinhados */
+  display: inline-block !important;
+  margin: 0 !important;
+  height: 22px; /* Altura consistente para badges do tipo shields.io */
 }
