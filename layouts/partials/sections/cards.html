@@ -1,0 +1,47 @@
+{{- /*
+  Secção genérica de cards (mesmo estilo de "projects").
+  Uso: {{ partial "sections/cards.html" (dict "site" . "id" "notes" "cfg" .Site.Params.notes) }}
+  Campos por item: title, content, image (opcional), badges (opcional),
+                   links: lista de { name, url }
+*/ -}}
+{{ $cfg := .cfg }}
+{{ if and $cfg ($cfg.enable | default false) }}
+<section id="{{ .id }}" class="py-5">
+    <div class="container">
+        <h3 class="text-center">{{ $cfg.title }}</h3>
+        <div class="row justify-content-center px-3 px-md-5">
+            {{ range $cfg.items }}
+            <div class="col-lg-4 col-md-6 my-3">
+                <div class="card my-3 h-100" title="{{ .title }}">
+                    {{ with .image }}
+                    <div class="card-head">
+                        <img class="card-img-top" src="{{ . | relURL }}" alt="{{ $.cfg.title }}" loading="lazy">
+                    </div>
+                    {{ end }}
+                    <div class="card-body bg-transparent p-3">
+                        {{ with .badges }}
+                        <div class="pb-2 bg-transparent">
+                            {{ range . }}<span class="badge badge-secondary">{{ . }}</span> {{ end }}
+                        </div>
+                        {{ end }}
+                        <h5 class="card-title bg-transparent mt-1">{{ .title }}</h5>
+                        <div class="card-text bg-transparent secondary-font">
+                            {{ .content }}
+                        </div>
+                    </div>
+                    {{ with .links }}
+                    <div class="card-footer py-3">
+                        {{ range . }}
+                        <a class="btn btn-sm m-1" href="{{ .url }}" target="_blank" rel="noopener">
+                            {{ .name | default "View" }}
+                        </a>
+                        {{ end }}
+                    </div>
+                    {{ end }}
+                </div>
+            </div>
+            {{ end }}
+        </div>
+    </div>
+</section>
+{{ end }}
