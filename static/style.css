@@ -176,14 +176,26 @@ button:focus-visible {
 
 /* ── About ───────────────────────────────────────────────── */
 
-#about .img-thumbnail {
-  border: 3px solid var(--secondary-color);
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+/* Imagem PNG transparente: o tema aplica .img-thumbnail do Bootstrap
+   (fundo branco + padding + borda) e .rounded-circle, que causavam o halo.
+   Aqui removemos tudo e usamos drop-shadow, que segue o contorno do PNG. */
+#about .image img.img-thumbnail {
+  background: transparent !important;
+  padding: 0 !important;
+  border: 0 !important;
+  border-radius: 0 !important;   /* apaga esta linha se quiseres recorte circular */
+  box-shadow: none !important;
+  filter: drop-shadow(0 0 0 rgba(9, 105, 218, 0));
+  transition: filter 0.35s ease-out;
 }
 
-.dark #about .img-thumbnail {
-  border-color: rgba(255, 255, 255, 0.06);
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+#about .image img.img-thumbnail:hover {
+  box-shadow: none !important;
+  filter: drop-shadow(0 8px 20px rgba(9, 105, 218, 0.35));
+}
+
+.dark #about .image img.img-thumbnail:hover {
+  filter: drop-shadow(0 8px 20px rgba(88, 166, 255, 0.45));
 }
 
 #about .content {
@@ -543,17 +555,24 @@ pre {
   }
 
   .card,
-  .card-img-top {
+  .card-img-top,
+  #about .image img.img-thumbnail {
     transition: none;
   }
 }
 
-/* Cartão de projeto inteiro clicável */
-#projects .card a::after {
+/* Cartão de projeto inteiro clicável (via o 1.º link do rodapé).
+   Os restantes links (ex.: docs) continuam clicáveis por cima. */
+#projects .card-footer span:first-of-type a::after {
   content: "";
   position: absolute;
   inset: 0;
   z-index: 1;
+}
+
+#projects .card-footer span + span {
+  position: relative;
+  z-index: 2;
 }
 
 #projects .card {
