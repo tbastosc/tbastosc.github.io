@@ -425,3 +425,25 @@ a {
     height: 180px;
   }
 }
+
+/* ── Correção para a Tabela de Skills no About ───────────── */
+#about .content table {
+  width: 100%;
+  display: block;
+  overflow-x: auto;
+  white-space: nowrap;
+  border-collapse: collapse;
+  margin-top: 1rem;
+}
+
+#about .content table th,
+#about .content table td {
+  padding: 0.5rem 0.75rem;
+  vertical-align: middle;
+}
+
+#about .content table td img {
+  display: inline-block;
+  margin: 2px 3px;
+  height: 20px; /* Garante que os badges ficam uniformes e alinhados */
+}
