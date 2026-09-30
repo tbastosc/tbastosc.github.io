@@ -68,7 +68,7 @@ params:
 
   navbar:
     align: ms-auto
-    brandName: "Bastos"
+    brandName: "./Tiago Bastos"
     disableSearch: false
     stickyNavBar:
       enable: true
@@ -88,7 +88,7 @@ params:
     intro: "Hi, my name is"
     title: "Tiago Bastos."
     subtitle: "Detection starts with visibility, response starts with preparation"
-    content: "Early-career Network & Cybersecurity Administrator with hands-on experience in Security Operations and Incident Response. Good security is built, not bought."
+    content: "Network & Cybersecurity Administrator. "
     image: images/hero.png
     bottomImage:
       enable: false
@@ -163,13 +163,21 @@ params:
           url: "#"
         date: "2025 - 2026"
         content: |-
-          Specialized professional training focused on network infrastructure, system security, threat detection, and incident response.
+          Specialized professional training focused on network infrastructure, system security, governance, risk, compliance, threat detection and incident response.
 
       - title: "CET Level 5: Specialist Technician in Mechatronics"
         school:
           name: "Mechatronics and Industrial Automation"
           url: "#"
         date: "2020 - 2022"
+        content: |-
+          Technical background Industrial Automation and Robotics.
+          
+      - title: "Advanced Course in Automation and Robotics"
+        school:
+          name: "MasterD"
+          url: "#"
+        date: "2023 - 2025"
         content: |-
           Technical background bridging mechanics, electronics, and industrial automation, providing a solid foundation for IT/OT security challenges.
 
