@@ -1,0 +1,37 @@
+# Hugo
+public/
+resources/
+.hugo_build.lock
+
+# OS
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Environment
+.env
+
+# Firecrawl cache
+.firecrawl/
+
+# Image backup (originals before AI generation)
+static/images/backup/
+
+# Agent/plugin skill directories
+.agents/
+.claude/skills/
+.factory/
+.goose/
+.windsurf/
+.playwright-mcp/
+skills-lock.json
+
+# Screenshots (temporary)
+*.png
+!static/**/*.png
+!static/**/*.jpg

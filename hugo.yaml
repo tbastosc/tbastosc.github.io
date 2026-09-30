@@ -1,0 +1,295 @@
+baseURL: "https://ethanolivertroy.github.io/hugo-portfolio-demo/"
+languageCode: "en-us"
+title: "Alex Chen | Security Portfolio"
+theme: hugo-profile
+
+outputs:
+  home:
+    - "HTML"
+    - "RSS"
+    - "JSON"
+  page:
+    - "HTML"
+    - "RSS"
+
+enableRobotsTXT: true
+
+pagination:
+  pagerSize: 5
+
+markup:
+  goldmark:
+    renderer:
+      unsafe: true
+
+Menus:
+  main:
+    - identifier: blog
+      name: Blog
+      title: Blog posts
+      url: /blogs
+      weight: 1
+
+params:
+  title: "Security Portfolio"
+  description: "Cybersecurity professional portfolio and blog"
+  favicon: "fav.png"
+
+  useBootstrapCDN: false
+  customCSS: true
+  animate: true
+
+  theme:
+    # disableThemeToggle: true
+    defaultTheme: "dark"
+
+  color:
+    primaryColor: "#0969da"
+    textColor: "#1f2328"
+    secondaryTextColor: "#656d76"
+    backgroundColor: "#ffffff"
+    secondaryBackgroundColor: "#f6f8fa"
+    secondaryColor: "#f6f8fa"
+    textLinkColor: "#0969da"
+
+    darkmode:
+      textColor: "#e6edf3"
+      secondaryTextColor: "#8b949e"
+      backgroundColor: "#0d1117"
+      secondaryBackgroundColor: "#161b22"
+      primaryColor: "#58a6ff"
+      secondaryColor: "#161b22"
+      textLinkColor: "#58a6ff"
+
+  font:
+    fontSize: 1rem
+    fontWeight: 400
+    lineHeight: 1.5
+    textAlign: left
+
+  navbar:
+    align: ms-auto
+    brandName: "Alex Chen"
+    disableSearch: false
+    stickyNavBar:
+      enable: true
+      showOnScrollUp: true
+    enableSeparator: false
+    menus:
+      disableAbout: false
+      disableExperience: false
+      disableEducation: false
+      disableProjects: false
+      disableAchievements: false
+      disableContact: false
+
+  # ─── Hero Section ───────────────────────────────────────────
+  hero:
+    enable: true
+    intro: "Hi, my name is"
+    title: "Alex Chen."
+    subtitle: "I build and defend secure systems"
+    content: "Security engineer by day, CTF player by night. I specialize in cloud security architecture and compliance automation — turning security requirements into infrastructure-as-code. Based in Austin, TX."
+    image: images/hero.png
+    bottomImage:
+      enable: false
+    button:
+      enable: true
+      name: "Resume"
+      url: "#"
+      download: true
+      newPage: false
+    socialLinks:
+      fontAwesomeIcons:
+        - icon: fab fa-github
+          url: "#"
+        - icon: fab fa-linkedin
+          url: "#"
+        - icon: fab fa-x-twitter
+          url: "#"
+
+  # ─── About Section ─────────────────────────────────────────
+  about:
+    enable: true
+    title: "About Me"
+    image: "images/me.png"
+    content: |-
+      I started my career in a SOC, moved into application security, and now lead cloud security initiatives at a mid-stage startup. Along the way I picked up a habit of automating everything — from compliance evidence collection to vulnerability triage.
+
+      When I'm not working, I'm probably competing in CTFs, contributing to open-source security tools, or writing about what I've learned. I believe the best security work happens when you make it easy for engineers to do the right thing by default.
+    skills:
+      enable: true
+      title: "Technologies and tools I work with:"
+      items:
+        - "Python"
+        - "Go"
+        - "Terraform"
+        - "Kubernetes"
+        - "AWS / GCP / Azure"
+        - "Burp Suite"
+        - "Docker"
+        - "Linux"
+        - "Nmap"
+        - "Wireshark"
+        - "Git"
+        - "CI/CD"
+
+  # ─── Experience Section ─────────────────────────────────────
+  experience:
+    enable: true
+    items:
+      - company: "CrowdShield"
+        companyUrl: "#"
+        jobs:
+          - name: "Senior Security Engineer"
+            date: "Jan 2023 - Present"
+            content: |
+              Leading cloud security initiatives across AWS and GCP environments. Responsible for threat modeling, security architecture reviews, and incident response.
+
+              - Designed and implemented automated compliance monitoring for SOC 2 and FedRAMP controls
+              - Reduced mean time to remediation for critical vulnerabilities by 60%
+              - Built CI/CD pipeline security gates using open-source tooling
+
+      - company: "Meridian Security"
+        companyUrl: "#"
+        jobs:
+          - name: "Security Engineer"
+            date: "Jun 2021 - Dec 2022"
+            content: |
+              Focused on application security and DevSecOps integration.
+
+              - Performed security assessments and penetration tests on web applications
+              - Integrated SAST/DAST tools into development pipelines
+              - Mentored junior engineers on secure coding practices
+
+      - company: "ThreatScope Analytics"
+        companyUrl: "#"
+        jobs:
+          - name: "SOC Analyst"
+            date: "Aug 2019 - May 2021"
+            content: |
+              Monitored and responded to security events in a 24/7 SOC environment.
+
+              - Triaged and investigated security alerts across SIEM, EDR, and network monitoring tools
+              - Developed detection rules and playbooks for common attack patterns
+              - Participated in incident response and forensic investigations
+
+  # ─── Education Section ──────────────────────────────────────
+  education:
+    enable: true
+    index: false
+    items:
+      - title: "B.S. in Computer Science"
+        school:
+          name: "University of Texas at Austin"
+          url: "#"
+        date: "2015 - 2019"
+        content: |-
+          Concentration in cybersecurity. Relevant coursework: Network Security, Cryptography, Operating Systems, Secure Software Development.
+
+          Activities:
+          - Cybersecurity club president
+          - CTF competition team member
+          - Undergraduate research in malware analysis
+
+  # ─── Certifications / Achievements ─────────────────────────
+  achievements:
+    enable: true
+    title: "Certifications"
+    items:
+      - title: "OSCP - Offensive Security Certified Professional"
+        content: "Hands-on penetration testing certification demonstrating ability to identify and exploit vulnerabilities."
+        url: https://www.offsec.com/courses/pen-200/
+      - title: "AWS Security Specialty"
+        content: "Validates expertise in securing AWS workloads, data, and infrastructure."
+        url: https://aws.amazon.com/certification/certified-security-specialty/
+      - title: "CISSP - Certified Information Systems Security Professional"
+        content: "Broad security management certification covering eight domains of cybersecurity."
+        url: https://www.isc2.org/certifications/cissp
+      - title: "CKS - Certified Kubernetes Security Specialist"
+        content: "Demonstrates proficiency in securing Kubernetes clusters and container-based applications."
+        url: https://training.linuxfoundation.org/certification/certified-kubernetes-security-specialist/
+
+  # ─── Projects Section ──────────────────────────────────────
+  projects:
+    enable: true
+    items:
+      - title: "Cloud Security Scanner"
+        content: "An open-source tool that scans cloud infrastructure for misconfigurations and compliance violations. Supports AWS, GCP, and Azure."
+        image: images/projects/profile.png
+        badges:
+          - "Python"
+          - "Terraform"
+          - "AWS"
+        links:
+          - icon: fab fa-github
+            url: #/cloud-security-scanner
+
+      - title: "Compliance Automation Framework"
+        content: "Automates evidence collection and control mapping for SOC 2, FedRAMP, and ISO 27001 assessments using infrastructure-as-code."
+        image: images/projects/profile2.png
+        badges:
+          - "Go"
+          - "OSCAL"
+          - "Terraform"
+        links:
+          - icon: fab fa-github
+            url: #/compliance-framework
+
+      - title: "CTF Writeups"
+        content: "Collection of capture-the-flag writeups covering web exploitation, binary analysis, cryptography, and cloud security challenges."
+        image: images/projects/converter.png
+        badges:
+          - "Security"
+          - "Python"
+          - "Linux"
+        links:
+          - icon: fab fa-github
+            url: #/ctf-writeups
+
+  # ─── Contact Section ───────────────────────────────────────
+  contact:
+    enable: true
+    content: "Always happy to connect with other security folks. Whether you want to collaborate on a project, talk shop about cloud security, or just say hi — don't hesitate to reach out."
+    btnName: Email me
+    btnLink: mailto:alex.chen@example.com
+    # formspree:
+    #   enable: true
+    #   formId: abcdefgh  # Get yours at https://formspree.io
+
+  # ─── Footer ────────────────────────────────────────────────
+  footer:
+    recentPosts:
+      path: "blogs"
+      count: 3
+      title: Recent Posts
+      enable: true
+      disableFeaturedImage: false
+    socialNetworks:
+      github: #
+      linkedin: #
+      twitter: #
+
+  listPages:
+    disableFeaturedImage: false
+
+  singlePages:
+    socialShare: true
+    readTime:
+      enable: true
+      content: "min read"
+    scrollprogress:
+      enable: true
+    tags:
+      openInNewTab: true
+
+  terms:
+    read: "Read"
+    toc: "Table Of Contents"
+    copyright: "All rights reserved"
+    emailText: "Check out this site"
+
+  datesFormat:
+    article: "Jan 2, 2006"
+    articleList: "Jan 2, 2006"
+    articleRecent: "Jan 2, 2006"

@@ -1,0 +1,427 @@
+/* ────────────────────────────────────────────────────────────
+   Portfolio Demo — Custom Styles
+   GitHub-inspired palette, editorial typography, clean layout
+   ──────────────────────────────────────────────────────────── */
+
+/* ── Global ──────────────────────────────────────────────── */
+
+::selection {
+  background: rgba(88, 166, 255, 0.25);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Lora', Georgia, serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Reduce excessive section spacing */
+section {
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+}
+
+section h3 {
+  font-family: 'Alata', sans-serif;
+  font-weight: 400;
+  font-size: 1.75rem;
+  letter-spacing: -0.02em;
+  margin-bottom: 2rem;
+}
+
+/* Tighten up containers */
+.container {
+  max-width: 1100px;
+}
+
+/* Links: no underline by default, underline on hover */
+a {
+  transition: color 0.2s ease-out;
+}
+
+/* ── Hero ────────────────────────────────────────────────── */
+
+#hero {
+  min-height: 80vh;
+  display: flex;
+  align-items: center;
+  padding-top: 4rem;
+}
+
+#hero .subtitle {
+  font-family: 'Lora', Georgia, serif;
+  font-size: 0.9rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  opacity: 0.5;
+}
+
+#hero h1 {
+  font-family: 'Alata', sans-serif;
+  font-size: clamp(2.5rem, 5vw, 3.75rem);
+  font-weight: 400;
+  letter-spacing: -0.03em;
+  line-height: 1.1;
+  margin-bottom: 0.25rem;
+}
+
+#hero h2 {
+  font-family: 'Alata', sans-serif;
+  font-size: clamp(1.1rem, 2.5vw, 1.5rem);
+  font-weight: 400;
+  letter-spacing: -0.01em;
+  opacity: 0.7;
+  margin-bottom: 1rem;
+}
+
+#hero .hero-content {
+  font-size: 1.05rem;
+  line-height: 1.7;
+  max-width: 540px;
+  opacity: 0.85;
+}
+
+/* Hero image — clean, no thumbnail border */
+#hero .image img {
+  border: none;
+  border-radius: 12px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.12);
+  transition: box-shadow 0.3s ease-out;
+}
+
+.dark #hero .image img {
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+}
+
+#hero .image img:hover {
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.2);
+}
+
+.dark #hero .image img:hover {
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.5);
+}
+
+/* Hero button */
+#hero .btn {
+  font-family: 'Alata', sans-serif;
+  font-size: 0.875rem;
+  letter-spacing: 0.02em;
+  border: 1.5px solid var(--primary-color);
+  color: var(--primary-color);
+  padding: 0.5rem 1.5rem;
+  border-radius: 6px;
+  transition: all 0.2s ease-out;
+  background: transparent;
+}
+
+#hero .btn:hover {
+  background: var(--primary-color);
+  color: var(--background-color);
+}
+
+/* Hero social links */
+#hero .socialLinks a {
+  color: var(--text-secondary-color);
+  transition: color 0.2s ease-out;
+  font-size: 1.1rem;
+}
+
+#hero .socialLinks a:hover {
+  color: var(--primary-color);
+}
+
+/* ── About ───────────────────────────────────────────────── */
+
+#about .img-thumbnail {
+  border: 3px solid var(--secondary-color);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+}
+
+.dark #about .img-thumbnail {
+  border-color: rgba(255, 255, 255, 0.06);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+}
+
+#about .content {
+  font-size: 1.05rem;
+  line-height: 1.75;
+}
+
+/* Skills badges */
+#about .badge {
+  font-family: 'Alata', sans-serif;
+  font-size: 0.8rem;
+  font-weight: 400;
+  padding: 0.35rem 0.75rem;
+  border-radius: 100px;
+  margin: 0.2rem;
+  background-color: var(--secondary-color);
+  color: var(--text-color);
+  border: 1px solid transparent;
+}
+
+.dark #about .badge {
+  background-color: rgba(255, 255, 255, 0.06);
+  color: var(--text-secondary-color);
+  border-color: rgba(255, 255, 255, 0.08);
+}
+
+/* ── Experience ──────────────────────────────────────────── */
+
+/* Tab pills — underline style instead of fill */
+#experience .nav-pills .nav-link {
+  font-family: 'Alata', sans-serif;
+  font-size: 0.9rem;
+  border-radius: 0;
+  padding: 0.5rem 1rem;
+  color: var(--text-secondary-color);
+  border-bottom: 2px solid transparent;
+  transition: all 0.2s ease-out;
+  background: none;
+}
+
+#experience .nav-pills .nav-link.active,
+#experience .nav-pills .nav-link:hover {
+  color: var(--primary-color);
+  background: none;
+  border-bottom-color: var(--primary-color);
+}
+
+#experience .card {
+  border: none;
+  border-left: 2px solid var(--secondary-color);
+  border-radius: 0;
+  padding-left: 1.5rem;
+  background: transparent;
+}
+
+.dark #experience .card {
+  border-left-color: rgba(255, 255, 255, 0.08);
+}
+
+#experience .card-body {
+  padding: 0.5rem 0;
+}
+
+#experience .card-body h5 {
+  font-family: 'Alata', sans-serif;
+  font-weight: 400;
+}
+
+/* ── Education ───────────────────────────────────────────── */
+
+#education .card {
+  border: 1px solid var(--secondary-color);
+  border-radius: 8px;
+  transition: border-color 0.2s ease-out;
+  background: var(--background-color);
+}
+
+.dark #education .card {
+  border-color: rgba(255, 255, 255, 0.08);
+  background: var(--secondary-color);
+}
+
+#education .card:hover {
+  border-color: var(--primary-color);
+}
+
+#education .index {
+  font-family: 'Alata', sans-serif;
+  opacity: 0.3;
+}
+
+#education .card-body h4 {
+  font-family: 'Alata', sans-serif;
+  font-weight: 400;
+}
+
+/* ── Projects ────────────────────────────────────────────── */
+
+.card {
+  border: 1px solid var(--secondary-color);
+  border-radius: 10px;
+  overflow: hidden;
+  transition: transform 0.25s ease-out, box-shadow 0.25s ease-out, border-color 0.25s ease-out;
+  background: var(--background-color);
+}
+
+.dark .card {
+  border-color: rgba(255, 255, 255, 0.06);
+  background: var(--secondary-color);
+}
+
+.card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+}
+
+.dark .card:hover {
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+  border-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Project card images */
+.card-img-top {
+  object-fit: cover;
+  height: 200px;
+  transition: transform 0.4s ease-out;
+}
+
+.card:hover .card-img-top {
+  transform: scale(1.03);
+}
+
+.card-head {
+  overflow: hidden;
+}
+
+/* Project/tech badges */
+.badge.bg-primary {
+  font-family: 'Alata', sans-serif;
+  font-size: 0.75rem;
+  font-weight: 400;
+  padding: 0.3rem 0.65rem;
+  border-radius: 100px;
+  background-color: rgba(9, 105, 218, 0.1);
+  color: #0969da;
+  border: none;
+}
+
+.dark .badge.bg-primary {
+  background-color: rgba(88, 166, 255, 0.1);
+  color: #58a6ff;
+}
+
+/* Project links */
+.card .btn {
+  font-size: 0.85rem;
+  opacity: 0.7;
+  transition: opacity 0.2s ease-out;
+}
+
+.card .btn:hover {
+  opacity: 1;
+}
+
+/* ── Certifications / Achievements ───────────────────────── */
+
+#achievements .card {
+  border: 1px solid var(--secondary-color);
+  border-radius: 8px;
+  transition: border-color 0.25s ease-out;
+}
+
+.dark #achievements .card {
+  border-color: rgba(255, 255, 255, 0.06);
+}
+
+#achievements .card:hover {
+  border-color: var(--primary-color);
+}
+
+#achievements .card-body h5 {
+  font-family: 'Alata', sans-serif;
+  font-weight: 400;
+  font-size: 1rem;
+}
+
+#achievements .card-body p {
+  font-size: 0.9rem;
+  opacity: 0.8;
+}
+
+/* ── Contact ─────────────────────────────────────────────── */
+
+#contact {
+  padding-bottom: 4rem;
+}
+
+#contact p {
+  max-width: 500px;
+  margin: 0 auto 1.5rem;
+  font-size: 1.05rem;
+  line-height: 1.7;
+  opacity: 0.85;
+}
+
+#contact .btn {
+  font-family: 'Alata', sans-serif;
+  font-size: 0.9rem;
+  letter-spacing: 0.02em;
+  background: var(--primary-color);
+  color: #ffffff;
+  border: none;
+  padding: 0.6rem 2rem;
+  border-radius: 6px;
+  transition: all 0.2s ease-out;
+}
+
+.dark #contact .btn {
+  color: #0d1117;
+}
+
+#contact .btn:hover {
+  opacity: 0.9;
+  transform: translateY(-1px);
+}
+
+/* ── Navbar ──────────────────────────────────────────────── */
+
+.navbar {
+  font-family: 'Alata', sans-serif;
+  font-size: 0.875rem;
+  letter-spacing: 0.01em;
+}
+
+.dark .navbar {
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
+.navbar-brand {
+  font-size: 1rem;
+  letter-spacing: -0.01em;
+}
+
+/* ── Footer ──────────────────────────────────────────────── */
+
+#footer .card {
+  border: 1px solid var(--secondary-color);
+  border-radius: 8px;
+}
+
+.dark #footer .card {
+  border-color: rgba(255, 255, 255, 0.06);
+}
+
+#footer .card-img-top {
+  height: 160px;
+}
+
+/* ── Responsive ──────────────────────────────────────────── */
+
+@media (max-width: 768px) {
+  #hero {
+    min-height: auto;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+  }
+
+  #hero h1 {
+    font-size: 2.25rem;
+  }
+
+  section {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+  }
+
+  .card-img-top {
+    height: 180px;
+  }
+}
