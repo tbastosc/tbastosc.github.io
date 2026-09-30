@@ -33,7 +33,7 @@ Menus:
 params:
   title: "Portfolio"
   description: "Network & Cybersecurity Administrator portfolio and blog"
-  favicon: "bb-logo.png"
+  favicon: "bb-white-logo.png"
 
   useBootstrapCDN: false
   customCSS: true
@@ -68,7 +68,7 @@ params:
 
   navbar:
     align: ms-auto
-    brandName: "./Tiago Bastos"
+    brandName: "./TiagoBastos"
     disableSearch: false
     stickyNavBar:
       enable: true
@@ -122,7 +122,6 @@ params:
       enable: true
       title: "Technologies and tools I work with:"
       items:
-        - |
           | Area | Skills / Tools |
           |---|---|
           | **SIEM / SOC** | ![Microsoft Sentinel](https://img.shields.io/badge/Microsoft_Sentinel-0078D4?style=flat-square) ![Wazuh](https://img.shields.io/badge/Wazuh-005EB8?style=flat-square) ![Security Onion](https://img.shields.io/badge/Security_Onion-1F2937?style=flat-square) ![Kibana](https://img.shields.io/badge/Kibana-005571?style=flat-square&logo=kibana&logoColor=white) ![Google SecOps](https://img.shields.io/badge/Google_SecOps-4285F4?style=flat-square&logo=google&logoColor=white) |
