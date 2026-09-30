@@ -121,7 +121,8 @@ params:
     skills:
       enable: true
       title: "Technologies and tools I work with:"
-      items:-|
+      items:
+        - |
           | Area | Skills / Tools |
           |---|---|
           | **SIEM / SOC** | ![Microsoft Sentinel](https://img.shields.io/badge/Microsoft_Sentinel-0078D4?style=flat-square) ![Wazuh](https://img.shields.io/badge/Wazuh-005EB8?style=flat-square) ![Security Onion](https://img.shields.io/badge/Security_Onion-1F2937?style=flat-square) ![Kibana](https://img.shields.io/badge/Kibana-005571?style=flat-square&logo=kibana&logoColor=white) ![Google SecOps](https://img.shields.io/badge/Google_SecOps-4285F4?style=flat-square&logo=google&logoColor=white) |
@@ -138,7 +139,6 @@ params:
           | **Programming** | ![Python](https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white) ![Bash](https://img.shields.io/badge/Bash-4EAA25?style=flat-square&logo=gnubash&logoColor=white) ![PowerShell](https://img.shields.io/badge/PowerShell-5391FE?style=flat-square) ![C++](https://img.shields.io/badge/C%2B%2B-00599C?style=flat-square&logo=cplusplus&logoColor=white) ![SQL](https://img.shields.io/badge/SQL-4B5563?style=flat-square) ![KQL](https://img.shields.io/badge/KQL-0078D4?style=flat-square) |
           | **OT / Industrial** | ![Siemens TIA Portal](https://img.shields.io/badge/Siemens_TIA_Portal-009999?style=flat-square&logo=siemens&logoColor=white) ![SCADA](https://img.shields.io/badge/SCADA-4B5563?style=flat-square) ![Industrial networks](https://img.shields.io/badge/Industrial_networks-4B5563?style=flat-square) ![CNC](https://img.shields.io/badge/CNC-4B5563?style=flat-square) ![Automation](https://img.shields.io/badge/Automation-4B5563?style=flat-square) |
           | **Maker** | ![3D printing](https://img.shields.io/badge/3D_printing-4B5563?style=flat-square) ![Klipper](https://img.shields.io/badge/Klipper-B22222?style=flat-square) ![Fusion 360](https://img.shields.io/badge/Fusion_360-FF6F1E?style=flat-square&logo=autodesk&logoColor=white) |
-
   # ─── Experience Section (Restaurado ao modelo original para preencheres depois) ───
   experience:
     enable: true
