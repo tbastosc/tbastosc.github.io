@@ -89,7 +89,7 @@ params:
     intro: "$~: whoami"
     title: "TiagoBastos"
     subtitle: "Network & Cybersecurity Administrator"
-    content: "Detection starts with visibility, response starts with preparation. Good security is built, not bought."
+    content: "I've been working in both detection and response, and here's what I've learned: You can't detect what you can't see, and you can't respond to what you haven't prepared for. Security starts with you, not a vendor."
     image: images/me.png
     bottomImage:
       enable: false
@@ -112,9 +112,12 @@ params:
     title: "About Me"
     #image: "images/me.png"
     content: |-
-      Detection starts with visibility, response starts with preparation. I have been building both, and a role in cybersecurity is where I want to put them to work. 
-      Early-career **Network & Cybersecurity Administrator** with hands-on experience in **Security Operations and Incident Response**. My background in military technical operations, mechatronics and industrial automation gives me a practical view of the security challenges where **IT meets OT**.
+      Early-career Network & Cybersecurity Administrator with hands-on experience in Security Operations and Incident Response. My background in military technical operations, mechatronics and industrial automation gives me a practical view of the security challenges where IT meets OT.
 
+      Still learning, but one thing is already clear: you can't detect what you can't see, and you can't respond to what you haven't prepared for. Good security is built, not bought.
+
+      I've been building my skills in both detection and response, and I'm looking for a cybersecurity role where I can put them to work.
+      
       - 🔎 SOC work: alert triage, phishing response, detection engineering (SIEM/SOAR, EDR/XDR)
       - 🌐 Networking: Vlans/VLSM, firewalls, ZTNA , hardening
       - 🧪 I learn by building: my Proxmox homelab is my training ground for blue team defense and also CTFS
