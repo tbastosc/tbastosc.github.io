@@ -127,24 +127,33 @@ button:focus-visible {
   opacity: 0.85;
 }
 
-/* Hero image — clean, no thumbnail border */
-#hero .image img {
-  border: none;
-  border-radius: 0px;
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.12);
-  transition: box-shadow 0.3s ease-out;
+/* Hero image — PNG transparente.
+   O tema usa .img-thumbnail (fundo branco + padding + borda), que causava o
+   fundo branco. Removemos isso e usamos drop-shadow (segue o contorno do PNG),
+   mantendo o efeito de escurecer ao passar o rato. */
+#hero .image img.img-thumbnail {
+  background: transparent !important;
+  padding: 0 !important;
+  border: 0 !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+  filter: drop-shadow(0 8px 16px rgba(0, 0, 0, 0.12)) !important;
+  transition: filter 0.3s ease-out !important;
 }
 
-.dark #hero .image img {
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+.dark #hero .image img.img-thumbnail {
+  filter: drop-shadow(0 8px 16px rgba(0, 0, 0, 0.4)) !important;
 }
 
-#hero .image img:hover {
-  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.2);
+#hero .image img.img-thumbnail:hover,
+#hero .image.animate img.img-thumbnail:hover {
+  box-shadow: none !important;
+  filter: drop-shadow(0 12px 22px rgba(0, 0, 0, 0.3)) !important;
 }
 
-.dark #hero .image img:hover {
-  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.5);
+.dark #hero .image img.img-thumbnail:hover,
+.dark #hero .image.animate img.img-thumbnail:hover {
+  filter: drop-shadow(0 12px 22px rgba(0, 0, 0, 0.6)) !important;
 }
 
 /* Hero button */
@@ -556,8 +565,9 @@ pre {
 
   .card,
   .card-img-top,
-  #about .image img.img-thumbnail {
-    transition: none;
+  #about .image img.img-thumbnail,
+  #hero .image img.img-thumbnail {
+    transition: none !important;
   }
 }
 
