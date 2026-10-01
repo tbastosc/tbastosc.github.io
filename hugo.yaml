@@ -112,7 +112,8 @@ params:
     title: "About Me"
     #image: "images/me.png"
     content: |-
-      Detection starts with visibility, response starts with preparation. I have been building both, and a role in cybersecurity is where I want to put them to work. Early-career **Network & Cybersecurity Administrator** with hands-on experience in **Security Operations and Incident Response**. My background in military technical operations, mechatronics and industrial automation gives me a practical view of the security challenges where **IT meets OT**.
+      Detection starts with visibility, response starts with preparation. I have been building both, and a role in cybersecurity is where I want to put them to work. 
+      Early-career **Network & Cybersecurity Administrator** with hands-on experience in **Security Operations and Incident Response**. My background in military technical operations, mechatronics and industrial automation gives me a practical view of the security challenges where **IT meets OT**.
 
       - 🔎 SOC work: alert triage, phishing response, detection engineering (SIEM/SOAR, EDR/XDR)
       - 🌐 Networking: segmentation, firewalls, Zero Trust access, hardening
