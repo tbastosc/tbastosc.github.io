@@ -203,7 +203,7 @@ params:
     items:
       - title: "Threat Hunting with KQL"
         content: "Playbook for structured threat hunting with KQL."
-        image: images/threat-hunting.png
+        image: images/kql.jpeg
         links:
           - name: "PT"
             url: "https://github.com/tbastosc/docs-runbooks-playbooks/blob/main/playbook_threat_hunting_kql.md"
@@ -211,13 +211,13 @@ params:
             url: "https://github.com/tbastosc/docs-runbooks-playbooks/blob/main/playbook_threat_hunting_kql_EN.md"
       - title: "Unlocking Machines - CrowdStrike"
         content: "Runbook to unlock machines contained in CrowdStrike."
-        image: images/crowdstrike.png
+        image: images/crowdstrike.jpeg
         links:
           - name: "PT"
             url: "https://github.com/tbastosc/docs-runbooks-playbooks/blob/main/runbook_desbloqueio_crowdstrike.md"
       - title: "Phishing Runbook - GSO"
         content: "Runbook for phishing triage and response."
-        image: images/phishing.png
+        image: images/gso-phis.jpeg
         links:
           - name: "PT"
             url: "https://github.com/tbastosc/docs-runbooks-playbooks/blob/main/runbook_phishing.md"
@@ -229,7 +229,7 @@ params:
     items:
       - title: "Linux CheatSheet: Fundamentals to Advanced (PT)"
         content: "Quick-reference notes covering Linux from the fundamentals to advanced usage."
-        image: images/linux.png
+        image: images/linux_sheet.jpeg
         badges:
           - "Linux"
           - "PT"
@@ -238,7 +238,7 @@ params:
             url: "https://tbastosc.github.io/linux-cheatsheet"
       - title: "Microsoft CheatSheet: Fundamentals to Advanced (PT)"
         content: "Quick-reference notes covering the Microsoft ecosystem from the fundamentals to advanced usage."
-        image: images/microsoft.png
+        image: images/ms-sheet.jpeg
         badges:
           - "Microsoft"
           - "PT"
@@ -292,7 +292,7 @@ params:
 
       - title: "Threat Hunting - Sentinel & Defender XDR"
         content: "05/2026 – 08/2026 — Hands-on Azure lab built while preparing for the SC-200. Sentinel workspace and data connectors, analytics rules (including multistage attack detection), custom detections, watchlists, threat intelligence IOCs and hunting for MITRE ATT&CK techniques with KQL."
-        image: images/projects/profile2.png
+        image: images/kql.jpeg
         badges:
           - "Microsoft Sentinel"
           - "Azure Log Analytics"
@@ -305,7 +305,7 @@ params:
 
       - title: "Security SOC Lab - Proxmox Server (WIP)"
         content: "05/2026 – Current — Self-hosted Proxmox environment split into a cybersecurity lab and a personal cloud (Jellyfin, Immich, backups). Used to practice alert triage, investigation, containment and remediation, with blue team tooling (Security Onion, Wazuh, Suricata/Zeek, TheHive/Cortex, MISP) and red team practice (Kali, Metasploit, Caldera, VulnHub, AD attack/defense)."
-        image: images/projects/converter.png
+        image: images/soclab1.jpeg
         badges:
           - "Proxmox"
           - "pfSense"
@@ -324,7 +324,7 @@ params:
 
       - title: "Goku-Invaders - Python Game"
         content: "Dec 2024 – Feb 2025 — Team final project of a Python programming course: a modified Space Invaders where Goku moves vertically and shoots enemy waves to save Kika. Level progression, story sequences between levels and a scoring system."
-        image: images/projects/converter.png
+        image: images/gokuinvader.jpeg
         badges:
           - "Python"
           - "Pygame"
