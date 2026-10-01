@@ -32,7 +32,7 @@ markup:
 
 params:
   title: "Portfolio"
-  copyright: ""   # texto depois do ©; vazio = só "© 2026 All rights reserved"
+  copyright: ""  
   description: "Network & Cybersecurity Administrator portfolio and blog"
   favicon: "bb-white-logo.png"
 
@@ -90,7 +90,7 @@ params:
     title: "TiagoBastos"
     subtitle: "Network & Cybersecurity Administrator"
     content: "Detection starts with visibility, response starts with preparation. Good security is built, not bought."
-    image: images/hero.png
+    image: images/me.png
     bottomImage:
       enable: false
     button:
@@ -110,7 +110,7 @@ params:
   about:
     enable: true
     title: "About Me"
-    image: "images/me.png"
+    #image: "images/me.png"
     content: |-
       Early-career **Network & Cybersecurity Administrator** with hands-on experience in **Security Operations and Incident Response**. My background in military technical operations, mechatronics and industrial automation gives me a practical view of the security challenges where **IT meets OT**.
 
@@ -145,7 +145,7 @@ params:
           | **Maker** | ![3D printing](https://img.shields.io/badge/3D_printing-4B5563?style=flat-square) ![Klipper](https://img.shields.io/badge/Klipper-B22222?style=flat-square) ![Fusion 360](https://img.shields.io/badge/Fusion_360-FF6F1E?style=flat-square&logo=autodesk&logoColor=white) |
   # ─── Experience Section (Restaurado ao modelo original para preencheres depois) ───
   experience:
-    enable: true
+    enable: false
     items:
       - company: "Company Name"
         companyUrl: "#"
@@ -157,7 +157,7 @@ params:
 
   # ─── Education Section ──────────────────────────────────────
   education:
-    enable: true
+    enable: false
     index: false
     items:
       - title: "Network Administration and Cybersecurity"
@@ -203,7 +203,7 @@ params:
     items:
       - title: "Threat Hunting with KQL"
         content: "Playbook for structured threat hunting with KQL."
-        image: images/runbooks/threat-hunting.png
+        image: images/threat-hunting.png
         links:
           - name: "PT"
             url: "https://github.com/tbastosc/docs-runbooks-playbooks/blob/main/playbook_threat_hunting_kql.md"
@@ -211,13 +211,13 @@ params:
             url: "https://github.com/tbastosc/docs-runbooks-playbooks/blob/main/playbook_threat_hunting_kql_EN.md"
       - title: "Unlocking Machines - CrowdStrike"
         content: "Runbook to unlock machines contained in CrowdStrike."
-        image: images/runbooks/crowdstrike.png
+        image: images/crowdstrike.png
         links:
           - name: "PT"
             url: "https://github.com/tbastosc/docs-runbooks-playbooks/blob/main/runbook_desbloqueio_crowdstrike.md"
       - title: "Phishing Runbook - GSO"
         content: "Runbook for phishing triage and response."
-        image: images/runbooks/phishing.png
+        image: images/phishing.png
         links:
           - name: "PT"
             url: "https://github.com/tbastosc/docs-runbooks-playbooks/blob/main/runbook_phishing.md"
@@ -229,7 +229,7 @@ params:
     items:
       - title: "Linux CheatSheet: Fundamentals to Advanced (PT)"
         content: "Quick-reference notes covering Linux from the fundamentals to advanced usage."
-        image: images/notes/linux.png
+        image: images/linux.png
         badges:
           - "Linux"
           - "PT"
@@ -238,7 +238,7 @@ params:
             url: "https://tbastosc.github.io/linux-cheatsheet"
       - title: "Microsoft CheatSheet: Fundamentals to Advanced (PT)"
         content: "Quick-reference notes covering the Microsoft ecosystem from the fundamentals to advanced usage."
-        image: images/notes/microsoft.png
+        image: images/microsoft.png
         badges:
           - "Microsoft"
           - "PT"
@@ -248,7 +248,7 @@ params:
 
   # ─── Certifications / Achievements ─────────────────────────
   achievements:
-    enable: true
+    enable: false
     title: "Certifications & Training"
     items:
       - title: "✅ Microsoft Certified: Security Operations Analyst Associate (SC-200)"
