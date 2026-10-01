@@ -324,7 +324,7 @@ params:
 
       - title: "Goku-Invaders - Python Game"
         content: "Dec 2024 – Feb 2025 — Team final project of a Python programming course: a modified Space Invaders where Goku moves vertically and shoots enemy waves to save Kika. Level progression, story sequences between levels and a scoring system."
-        image: images/gokuinvader.jpeg
+        image: images/gokuinvaders.jpg
         badges:
           - "Python"
           - "Pygame"
