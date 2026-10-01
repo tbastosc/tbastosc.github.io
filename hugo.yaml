@@ -191,7 +191,7 @@ params:
     items:
       - title: "All write-ups"
         content: "CTF and lab write-ups collected in a single repository."
-        image: images/writeups/writeups.png
+        image: images/writeups.jpeg
         links:
           - name: "GitHub"
             url: "https://github.com/tbastosc/writeups"
