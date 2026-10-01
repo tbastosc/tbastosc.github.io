@@ -137,23 +137,24 @@ button:focus-visible {
   border: 0 !important;
   border-radius: 0 !important;
   box-shadow: none !important;
-  filter: drop-shadow(0 8px 16px rgba(0, 0, 0, 0.12)) !important;
-  transition: filter 0.3s ease-out !important;
+  filter: brightness(1) drop-shadow(0 8px 16px rgba(0, 0, 0, 0.25)) !important;
+  transition: filter 0.4s ease-out !important;
 }
 
 .dark #hero .image img.img-thumbnail {
-  filter: drop-shadow(0 8px 16px rgba(0, 0, 0, 0.4)) !important;
+  filter: brightness(1) drop-shadow(0 8px 16px rgba(0, 0, 0, 0.55)) !important;
 }
 
+/* Hover: escurece suavemente a imagem + sombra maior e mais funda */
 #hero .image img.img-thumbnail:hover,
 #hero .image.animate img.img-thumbnail:hover {
   box-shadow: none !important;
-  filter: drop-shadow(0 12px 22px rgba(0, 0, 0, 0.3)) !important;
+  filter: brightness(0.82) drop-shadow(0 14px 26px rgba(0, 0, 0, 0.45)) !important;
 }
 
 .dark #hero .image img.img-thumbnail:hover,
 .dark #hero .image.animate img.img-thumbnail:hover {
-  filter: drop-shadow(0 12px 22px rgba(0, 0, 0, 0.6)) !important;
+  filter: brightness(0.78) drop-shadow(0 14px 26px rgba(0, 0, 0, 0.85)) !important;
 }
 
 /* Hero button */
