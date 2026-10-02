@@ -191,7 +191,7 @@ params:
   # ─── Write-ups (secção custom: layouts/partials/sections/cards.html) ───
   writeups:
     enable: true
-    title: "Write-ups"
+    title: "Documentation"
     items:
       - title: "All write-ups"
         content: "CTF and lab write-ups collected in a single repository."
