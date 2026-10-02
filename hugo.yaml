@@ -199,6 +199,12 @@ params:
         links:
           - name: "GitHub"
             url: "https://github.com/tbastosc/writeups"
+      - title: "Tecnical Reports"
+        content: "Tecnical reports made"
+        image: images/writeups.jpeg
+        links:
+          - name: "GitHub"
+            url: "https://github.com/tbastosc/writeups/Reports"
 
   # ─── Runbooks & Playbooks (secção custom) ───────────────────
   runbooks:
