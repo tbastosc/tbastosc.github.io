@@ -200,8 +200,8 @@ params:
           - name: "GitHub"
             url: "https://github.com/tbastosc/writeups"
       - title: "Tecnical Reports"
-        content: "Tecnical reports made"
-        image: images/writeups.jpeg
+        content: "Blue/Red Tecnical reports made"
+        image: images/reports.jpeg
         links:
           - name: "GitHub"
             url: "https://github.com/tbastosc/writeups/Reports"
