@@ -284,6 +284,22 @@ params:
   projects:
     enable: true
     items:
+      - title: "Honeypot Lab & Threat Analysis"
+        content: "08/2026 – 09/2026 — Deployment and configuration of honeypot sensors to capture, log, and analyze real-world malicious traffic and automated attacks. Includes threat triage, attack vector identification, payload collection, and mapping adversary activity to MITRE ATT&CK techniques."
+        image: images/honeypot.jpeg
+        badges:
+          - "Honeypot"
+          - "Threat Analysis"
+          - "MITRE ATT&CK"
+          - "Log Analysis"
+          - "Network Security"
+          - "Linux"
+          - "Sentinel"
+          - "Azure"
+        links:
+          - icon: fab fa-github
+            url: "https://github.com/tbastosc/writeups/blob/main/Reports/Honeypot_lab.md"
+            
       - title: "Secure Infrastructure for company Codesecure"
         content: "Cesae Digital · 01/2026 – 03/2026 — Final project of the Network & Cybersecurity Administrator assessment. Segmented, secure infrastructure (defense-in-depth + ZTNA) for a simulated company with 120 hosted websites and 14 client VMs: VLANs/VLSM, DMZ, pfSense, Cloudflare ZTNA, Drupal SQLi pentest mapped to MITRE ATT&CK, risk assessment of 19 critical assets, Linux/AD hardening and Wazuh SIEM with active response."
         image: images/projects/profile.png
