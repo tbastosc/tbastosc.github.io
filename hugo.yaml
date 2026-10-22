@@ -204,7 +204,7 @@ params:
         image: images/reports.jpeg
         links:
           - name: "GitHub"
-            url: "https://github.com/tbastosc/writeups/Reports"
+            url: "https://github.com/tbastosc/writeups/tree/main/Reports"
 
   # ─── Runbooks & Playbooks (secção custom) ───────────────────
   runbooks:
